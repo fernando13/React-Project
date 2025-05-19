@@ -14,8 +14,6 @@ const routes = [
     element: <MainLayout />,
     children: [
       {
-        //path --> camino / la ruta
-        //elemento --> el componete que se rederiza
         path: "/",
         element: <Home />, //JSX.Element / React.ReactNode
       },
