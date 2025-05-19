@@ -1,25 +1,36 @@
-//import { useState } from 'react'
+import { useState, useRef } from 'react'
 
-//import './App.css'
 import { Box, ChakraProvider } from '@chakra-ui/react'
 import NavBar from './components/NavBar'
 import ItemListContainer from './components/ItemListContainer'
+import { RouterProvider } from 'react-router';
+import { router } from './routes';
+
+// ImageCarousel
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 
-function App() {
-  //const [count, setCount] = useState(0)
-
+const App = () => {
   return (
     <ChakraProvider>
-      <Box height="100vh">
-        <NavBar />      
-        <ItemListContainer greeting="Bienvenidos a mi tienda!" />
-      </Box>
+        {/* <ItemListContainer /> */}
+        <RouterProvider router={router} />
     </ChakraProvider>
   );
-}
+};
 
 export default App;
 
 
-
+// function App() {
+//   return (
+//     <ChakraProvider>
+//       <Box height="100vh">
+//         <NavBar /> 
+//         <RouterProvider router={router} />
+//         {/* <ItemListContainer /> */}
+//       </Box>
+//     </ChakraProvider>
+//   );
+// }
